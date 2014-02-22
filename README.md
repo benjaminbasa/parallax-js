@@ -1,8 +1,27 @@
-Angular Barebone
-================
+boilerplate: angularjs
+======================
 
-A project scaffold for applications using AngularJS library. Angular Barebone
-can run on Apache or NodeJS servers.
+A project boilerplate using AngularJS library. boilerplate: angular can run on 
+Apache or NodeJS servers. This project is for noobs like me who are just getting
+started on AngularJS. :)
+
+This boilerplate uses:
+
+- Angular 1.2.13,
+- jQuery 2.0.3
+- Bootstrap 3.1.1
+- Font-Awesome 4.0.3
+
+I know [Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/) but I
+haven't really got the time to study it and since these were the main frontend
+packages in my boilerplate then I'll leave them here for now.
+
+
+### Table of Contents
+
+1. [Usage](#usage): how to use this boilerplate
+2. [Directory Structure](#directory-structure)
+3. [Grunt Tasks](#grunt-tasks)
 
 Usage
 -----
@@ -17,10 +36,11 @@ Usage
        okay too, we have included an `.htaccess` file with HTML5 mode on so you
        can take over your application's routing needs.
 
-### Directory Structure
+Directory Structure
+-------------------
 
 ``` shell
-jekyll-barebone   # root directory
+boilerplate: angularjs   # root directory
 ├── application
 │   ├── assets
 │   │   ├── css
@@ -39,7 +59,10 @@ jekyll-barebone   # root directory
 └── README.md
 ```
 
-### Source directory `source/`
+source 
+------
+
+`source/`
 
 source directory is where we place precompiled assets e.g., less, scss, image
 files or in other words the  'raw-sources' we then specify and use Gruntfile to
@@ -71,7 +94,9 @@ to build your application. You may run `$ grunt` to perform default tasks.
 it copies all packages downloaded inside `bower_components` which are also 
 listed in `bower.json` you may add additional package anytime just make sure 
 
-`$ grunt updatepkg`
+```shell
+$ grunt updatepkg
+```
 
 **less**
 
@@ -84,18 +109,26 @@ you may run this while working on your less stylesheets, it watches `source/less
 directory for file changes and automatically executes the less task that compiles
 less stylesheets to css, outputs go to `application/assets/css`.
 
-`$ grunt watchless` or `$ grunt buildless` 
+```shell 
+$ grunt watchless # or 
+$ grunt buildless
+``` 
 
 **imagemin**
 
 optimises image files `*.{gif,jpg,png}` and compresses 
 these up to 20% less of the the original file size.
 
-`$ grunt buildimg`
+```shell
+$ grunt buildimg
+```
 
 **jshint**
 
 watch folders changes and automatically jshint to lint the `.js` filez you're 
 currently working on just run
 
-`$ grunt watchjs` or `$ grunt lint`
+```shell 
+$ grunt watchjs #or 
+$ grunt lint
+```

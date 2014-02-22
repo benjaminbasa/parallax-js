@@ -1,3 +1,7 @@
+/*! =========================================================================
+ * Grunt Tasks for AngularJS web apps v0.1.0
+ * Copyright 2014 (c) Pongstr Ordillo. MIT License.
+ * ========================================================================= */
 
 module.exports = function(grunt) {
 

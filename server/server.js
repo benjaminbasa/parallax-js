@@ -1,5 +1,5 @@
 /*! =========================================================================
- * Express Server for AngularJS web apps v0.0.1
+ * Express Server for AngularJS web apps v0.1.0
  * Copyright 2014 (c) Pongstr Ordillo. MIT License.
  * ========================================================================= */
 
@@ -15,9 +15,9 @@ App.configure(function () {
 
   App.set('port', process.env.PORT || 4001);
 
+	// Application directories
   App.use('/assets', express.static(__dirname + '/../application/assets'));
   App.use('/includes', express.static(__dirname + '/../application/includes'));
-
 
   // 404 Forbidden 
   // Deny direct access to public directories
@@ -33,8 +33,6 @@ App.configure(function () {
     res.sendfile('application/index.html');
   });
   
-
-
 });
 
 
