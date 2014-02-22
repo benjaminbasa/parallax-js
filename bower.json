@@ -1,0 +1,15 @@
+{
+  "name":         "angular-barebone",
+  "version":      "0.1.0",
+  "description":  "Scaffold/Boilerplate/Project Template for applications using AngularJS",
+  "author":       "Pongstr Ordillo",
+  "email":        "philip.ordillo@torocommerce.com",
+  "private":      "true",
+  "license":      "MIT",
+  "dependencies": {
+    "angular":      "1.2.13",
+    "jquery":       "2.0.3",
+    "bootstrap":    "3.1.1",
+    "font-awesome": "4.0.3"
+  }
+}
