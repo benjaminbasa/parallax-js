@@ -40,17 +40,6 @@ module.exports = function(grunt) {
 
       javascript: {
         files: [
-          { // Copy AngularJS library
-            expand: true,
-            flatten: true,
-            src: [
-              'bower_components/angular/angular.js', 
-              'bower_components/angular/angular.min.js', 
-              'bower_components/angular/angular.min.js.map'
-            ],
-            dest: 'application/assets/js/lib/angular/',
-            filter: 'isFile'
-          },
           { // Copy jQuery library
             expand: true,
             flatten: true,
@@ -127,8 +116,7 @@ module.exports = function(grunt) {
       },
       jshint: {
         files: [
-          'application/assets/js/app/*.js',
-          'server/server.js'
+          'application/assets/js/app/*.js'
         ],
         tasks: ['jshint:express', 'jshint:app']
       }
@@ -175,14 +163,6 @@ module.exports = function(grunt) {
     jshint: {
       grunt: {
         src: ['Gruntfile.js']
-      },
-      express: {
-        options: {
-          jshintrc: 'server/.jshintrc'
-        },
-        src: [
-          'server/server.js'
-        ]
       },
       app: {
         options: {

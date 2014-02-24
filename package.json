@@ -1,14 +1,11 @@
 {
-  "name":         "angular-barebone",
+  "name":         "jekyll-barebone",
   "version":      "0.1.0",
-  "description":  "Project scaffold/boilerplate/template for front-end applications built on AngularJS",
+  "description":  "Project scaffold/boilerplate/template for front-end prototyping with Jekyll",
   "author":       "Pongstr Ordillo",
   "email":        "twiz.tickler@gmail.com",
   "private":      "true",
   "license":      "MIT",
-  "scripts": {
-    "start": "nodemon server/server.js"  
-  },
   "dependencies" : {
     "express" : "~3.4.8",
     "nodemon":  "~1.0.15"

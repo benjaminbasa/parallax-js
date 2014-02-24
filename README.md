@@ -1,21 +1,13 @@
 boilerplate: angularjs
 ======================
 
-A project boilerplate using AngularJS library. boilerplate: angular can run on 
-Apache or NodeJS servers. This project is for noobs like me who are just getting
-started on AngularJS. :)
+A project boilerplate for prototyping web apps using Jekyll and Bootstrap 3.
 
 This boilerplate uses:
 
-- Angular 1.2.13,
 - jQuery 2.0.3
 - Bootstrap 3.1.1
 - Font-Awesome 4.0.3
-
-I know [Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/) but I
-haven't really got the time to study it and since these were the main frontend
-packages in my boilerplate then I'll leave them here for now.
-
 
 ### Table of Contents
 
@@ -30,11 +22,7 @@ Usage
    `$ npm install`
 2. Install Bower packages:   
   `$ bower install`
-3. (a) If you decide to go full Javascript and run your application on NodeJS server
-       we got you covered, just run: `$ npm start`
-4. (b) If there's nowhere to place your app and apache is available, that's
-       okay too, we have included an `.htaccess` file with HTML5 mode on so you
-       can take over your application's routing needs.
+
 
 Directory Structure
 -------------------
@@ -51,8 +39,8 @@ boilerplate: angularjs   # root directory
 |   |        └── lib
 |   ├── .htaccess
 |   └── index.html
-├── server
 ├── source
+├── _config.yml
 ├── bower.json
 ├── Gruntfile.js
 ├── package.json

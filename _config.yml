@@ -1,0 +1,37 @@
+
+# Site Information
+# -----------------------------------------------------------------------------
+
+title:        "jekyll-barebone"
+tagline:      "Project scaffold/boilerplate/template for front-end prototyping with Jekyll"
+version:      "0.1.0"
+
+author:      "Pongstr"
+description: "Project scaffold/boilerplate/template for front-end prototyping with Jekyll"
+keywords:    ""
+  
+
+# Repository
+repository:   "" 
+issues:       ""
+
+
+# Format
+# -----------------------------------------------------------------------------
+markdown:     kramdown
+permalink:    pretty
+pygments:     false
+paginate:     5
+
+
+# Build Info
+# -----------------------------------------------------------------------------
+source:       application
+include:      ['.htaccess']
+exclude:      ['.gitignore', 'Gruntfile.js', 'package.json', 'bower.json', 'node_modules', 'bower_components']
+
+# Server
+host:         localhost
+port:         4001
+baseurl:      /
+destination:  _gh_pages
