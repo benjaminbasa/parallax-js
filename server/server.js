@@ -29,7 +29,7 @@ App.configure(function () {
     res.sendfile('application/error.html');
   });
 
-  App.all('/', function (req, res) {
+  App.all('*', function (req, res) {
     res.sendfile('application/index.html');
   });
   
