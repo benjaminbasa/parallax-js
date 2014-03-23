@@ -48,7 +48,7 @@ module.exports = function(grunt) {
               'bower_components/angular/angular.min.js', 
               'bower_components/angular/angular.min.js.map'
             ],
-            dest: 'application/assets/js/lib/angular/',
+            dest: 'application/core/lib/angular/',
             filter: 'isFile'
           },
           { // Copy jQuery library
@@ -59,14 +59,14 @@ module.exports = function(grunt) {
               'bower_components/jquery/jquery.min.js', 
               'bower_components/jquery/jquery.min.map'
             ],
-            dest: 'application/assets/js/lib/jquery/',
+            dest: 'application/core/lib/jquery/',
             filter: 'isFile'
           },
           { // Copy Bootstrap
             expand: true,
             flatten: true,
             src: ['bower_components/bootstrap/dist/js/*'],
-            dest: 'application/assets/js/lib/bootstrap/',
+            dest: 'application/core/lib/bootstrap/',
             filter: 'isFile'            
           }
         ]
@@ -186,10 +186,10 @@ module.exports = function(grunt) {
       },
       app: {
         options: {
-          jshintrc: 'application/assets/js/app/.jshintrc'
+          jshintrc: 'application/core/app/.jshintrc'
         },
         src: [
-          'application/assets/js/app/app.js'
+          'application/core/app/app.js'
         ]
       }
     }

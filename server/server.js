@@ -25,7 +25,7 @@ App.configure(function () {
     res.sendfile('application/error.html');
   });
 
-  App.use('/includes', function (req, res) {
+  App.use('/views', function (req, res) {
     res.sendfile('application/error.html');
   });
 
