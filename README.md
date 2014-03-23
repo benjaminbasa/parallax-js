@@ -42,13 +42,13 @@ Directory Structure
 ``` shell
 boilerplate: angularjs   # root directory
 ├── application
+|   └── core
+|   |   ├── app
+|   |   └── lib
 │   ├── assets
 │   │   ├── css
 │   │   ├── fonts
 |   │   ├── img
-|   |   └── js
-|   |        ├── app
-|   |        └── lib
 |   ├── .htaccess
 |   └── index.html
 ├── server
