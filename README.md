@@ -1,13 +1,13 @@
 boilerplate: angularjs
 ======================
 
-A project boilerplate using AngularJS library. boilerplate: angular can run on 
+A project boilerplate using AngularJS library. boilerplate: angular can run on
 Apache or NodeJS servers. This project is for noobs like me who are just getting
 started on AngularJS. :)
 
 This boilerplate uses:
 
-- Angular 1.2.13,
+- Angular 1.2.15,
 - jQuery 2.0.3
 - Bootstrap 3.1.1
 - Font-Awesome 4.0.3
@@ -26,9 +26,9 @@ packages in my boilerplate then I'll leave them here for now.
 Usage
 -----
 
-1. Install Node packages:   
+1. Install Node packages:
    `$ npm install`
-2. Install Bower packages:   
+2. Install Bower packages:
   `$ bower install`
 3. (a) If you decide to go full Javascript and run your application on NodeJS server
        we got you covered, just run: `$ npm start`
@@ -59,7 +59,7 @@ boilerplate: angularjs   # root directory
 └── README.md
 ```
 
-source 
+source
 ------
 
 `source/`
@@ -91,8 +91,8 @@ to build your application. You may run `$ grunt` to perform default tasks.
 
 **copy**
 
-it copies all packages downloaded inside `bower_components` which are also 
-listed in `bower.json` you may add additional package anytime just make sure 
+it copies all packages downloaded inside `bower_components` which are also
+listed in `bower.json` you may add additional package anytime just make sure
 
 ```shell
 $ grunt updatepkg
@@ -109,14 +109,14 @@ you may run this while working on your less stylesheets, it watches `source/less
 directory for file changes and automatically executes the less task that compiles
 less stylesheets to css, outputs go to `application/assets/css`.
 
-```shell 
-$ grunt watchless # or 
+```shell
+$ grunt watchless # or
 $ grunt buildless
-``` 
+```
 
 **imagemin**
 
-optimises image files `*.{gif,jpg,png}` and compresses 
+optimises image files `*.{gif,jpg,png}` and compresses
 these up to 20% less of the the original file size.
 
 ```shell
@@ -125,10 +125,10 @@ $ grunt buildimg
 
 **jshint**
 
-watch folders changes and automatically jshint to lint the `.js` filez you're 
+watch folders changes and automatically jshint to lint the `.js` filez you're
 currently working on just run
 
-```shell 
-$ grunt watchjs #or 
+```shell
+$ grunt watchjs #or
 $ grunt lint
 ```

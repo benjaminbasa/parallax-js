@@ -14,3 +14,9 @@ can run on Apache or NodeJS servers.
 4. `.jshintrc` for your angularjs apps
 
 ----------------
+
+**v0.1.3** [Marc. 28, 2014] Updated to AngularJS 1.2.15
+
+- Updated to AngularJS 1.2.15
+- Added Angular modules
+- Updated Gruntfile.js
