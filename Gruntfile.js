@@ -14,10 +14,9 @@ module.exports = function(grunt) {
             ' * =========================================================================\n' +
             ' * <%= pkg.description %> \n'+
             ' * Authored by <%= pkg.author %> [<%= pkg.email %>] \n' +
-            ' * ========================================================================= */\n',
+            ' * ========================================================================= */',
 
     // Copy assets that don't need processing
-    // ======================================
     copy: {
       fonts: {
         files: [
@@ -108,7 +107,6 @@ module.exports = function(grunt) {
     },
 
     // Compile Less stylesheets
-    // =====================================
     less: {
       development: {
         options: {
@@ -134,7 +132,6 @@ module.exports = function(grunt) {
     },
 
     // Watch Tasks
-    // =====================================
     watch: {
       less: {
         files: ['source/less/**/*.less'],
@@ -150,7 +147,6 @@ module.exports = function(grunt) {
     },
 
     // Optimise Image Assets
-    // =====================================
     imagemin: {
       dynamic: {
         options: {
@@ -169,18 +165,18 @@ module.exports = function(grunt) {
     },
 
     // Add Banners for Application Build info
-    // ======================================
     usebanner: {
       dist: {
         options: {
           position: 'top',
-          banner: '<%= banner %>'
+          banner: '<%= banner %> \n',
+          linebreak: true
         },
         files: {
           src: [
-            'dist/css/**',
-            'dist/js/**',
-            'Gruntfile.js'
+            'application/assets/css/<%= pkg.name %>.css',
+            'application/assets/css/<%= pkg.name %>.min.css',
+            'application/core/app/app.js'
           ]
         }
       }
@@ -207,11 +203,23 @@ module.exports = function(grunt) {
           'application/core/app/app.js'
         ]
       }
-    }
+    },
 
+    bump: {
+      options: {
+        file: ['package.json', 'bower.json'],
+        updateConfigs: ['pkg'],
+        createTag: false,
+        tagName: '%VERSION%-angularjs',
+        tagMessage: 'version v%VERSION%',
+        push: false,
+        pushTo: 'origin'
+      }
+    }
   });
 
   // These grunt plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -236,7 +244,10 @@ module.exports = function(grunt) {
   // Optimise and Build images for production
   grunt.registerTask('buildimg', ['imagemin']);
 
+  // Release/Bump a version
+  grunt.registerTask('release-version', ['less', 'imagemin', 'bump', 'usebanner']);
+
   // Default Task
-  grunt.registerTask('default', ['less', 'imagemin', 'jshint']);
+  grunt.registerTask('default', ['less', 'imagemin']);
 
 };

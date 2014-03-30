@@ -16,10 +16,11 @@ App.configure(function () {
   App.set('port', process.env.PORT || 4001);
 
 	// Application directories
+  App.use('/core', express.static(__dirname + '/../application/core'));
   App.use('/assets', express.static(__dirname + '/../application/assets'));
   App.use('/includes', express.static(__dirname + '/../application/includes'));
 
-  // 404 Forbidden 
+  // 404 Forbidden
   // Deny direct access to public directories
   App.use('/assets', function (req, res) {
     res.sendfile('application/error.html');
@@ -32,7 +33,7 @@ App.configure(function () {
   App.all('*', function (req, res) {
     res.sendfile('application/index.html');
   });
-  
+
 });
 
 

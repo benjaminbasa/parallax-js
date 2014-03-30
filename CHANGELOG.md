@@ -20,3 +20,7 @@ can run on Apache or NodeJS servers.
 - Updated to AngularJS 1.2.15
 - Added Angular modules
 - Updated Gruntfile.js
+
+**v0.1.4** [Marc. 30, 2014] Updated DevDependencies
+
+- updated devDependencies to the latest, greatest version
