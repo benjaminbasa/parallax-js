@@ -2,12 +2,12 @@
 # Site Information
 # -----------------------------------------------------------------------------
 
-title:        "jekyll-barebone"
-tagline:      "Project scaffold/boilerplate/template for front-end prototyping with Jekyll"
+title:        "parallax-website"
+tagline:      "Parallax Website"
 version:      "0.1.0"
 
-author:      "Pongstr"
-description: "Project scaffold/boilerplate/template for front-end prototyping with Jekyll"
+author:      "Benjamin Basa"
+description: "Parallax Website"
 keywords:    ""
   
 

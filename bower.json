@@ -1,14 +1,29 @@
 {
-  "name":         "jekyll-barebone",
-  "version":      "0.1.0",
-  "description":  "Project scaffold/boilerplate/template for front-end prototyping with Jekyll",
-  "author":       "Pongstr Ordillo",
-  "email":        "philip.ordillo@torocommerce.com",
-  "private":      "true",
-  "license":      "MIT",
+  "name": "bower init",
+  "version": "0.1.0",
+  "description": "Parallax Website",
+  "author": "Benjamin Basa",
+  "email": "benjaminbasa@gmail.com",
+  "private": true,
+  "license": "MIT",
   "dependencies": {
-    "jquery":       "2.0.3",
-    "bootstrap":    "3.1.1",
+    "jquery": "2.0.3",
+    "bootstrap": "3.1.1",
     "font-awesome": "4.0.3"
+  },
+  "homepage": "https://github.com/benjaminbasa/boilerplate",
+  "authors": [
+    "Benjamin Basa <benjamin.basa@torocommerce.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0"
   }
 }
