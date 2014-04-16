@@ -44,8 +44,8 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'bower_components/jquery/jquery.js', 
-              'bower_components/jquery/jquery.min.js', 
+              'bower_components/jquery/jquery.js',
+              'bower_components/jquery/jquery.min.js',
               'bower_components/jquery/jquery.min.map'
             ],
             dest: 'application/assets/js/lib/jquery/',
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['bower_components/bootstrap/dist/js/*'],
             dest: 'application/assets/js/lib/bootstrap/',
-            filter: 'isFile'            
+            filter: 'isFile'
           }
         ]
       },
@@ -71,11 +71,11 @@ module.exports = function(grunt) {
             filter: 'isFile'
           },
           { // Font-awesome less stylesheets
-            expand: true, 
+            expand: true,
             flatten: true,
             src: ['bower_components/font-awesome/less/*'],
             dest: 'source/less/font-awesome',
-            filter: 'isFile'            
+            filter: 'isFile'
           }
         ]
       }
@@ -99,10 +99,27 @@ module.exports = function(grunt) {
           strictMath: true,
           sourceMap: false,
           compress: true
-        },        
+        },
         files: {
           'application/assets/css/<%= pkg.name %>.min.css' : 'source/less/bootstrap.less',
           'application/assets/css/font-awesome.min.css': 'source/less/font-awesome/font-awesome.less'
+        }
+      }
+    },
+
+    // Compass
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'source/scss',
+          cssDir: 'application/assets/css',
+          environment: 'production'
+        }
+      },
+      dev: {
+        options: {
+          sassDir: 'source/scss',
+          cssDir: 'application/assets/css',
         }
       }
     },
@@ -137,7 +154,7 @@ module.exports = function(grunt) {
             cwd: 'source/img/',
             dest: 'application/assets/img/'
           }
-        ]          
+        ]
       }
     },
 
@@ -151,8 +168,8 @@ module.exports = function(grunt) {
         },
         files: {
           src: [
-            'dist/css/**', 
-            'dist/js/**', 
+            'dist/css/**',
+            'dist/js/**',
             'Gruntfile.js'
           ]
         }
@@ -182,8 +199,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat'); 
-  grunt.loadNpmTasks('grunt-contrib-uglify'); 
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
@@ -193,7 +211,10 @@ module.exports = function(grunt) {
   // Less CSS Tasks
   grunt.registerTask('watchless', ['watch:less']);
   grunt.registerTask('buildless', ['less']);
-  
+
+  // Compass SCSS Tasls
+  grunt.registerTask('buildsass', ['compass']);
+
   // Javascript Tasks
   grunt.registerTask('lintjs', ['jshint']);
   grunt.registerTask('watchjs', ['watch:jshint']);
